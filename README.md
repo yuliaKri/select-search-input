@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Technical Frontend Interview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hi! Hey thanks for doing this. We really appreciate it!
 
-## Available Scripts
+## Instructions
+We do a lot on the frontend. We care deeply about user experience, performance, and readability. We've provided you with a skeleton React project with a `CityField` component that is meant to help users fill in the City field in an address form.
+1. Get your environment set up
+2. Code!
+    * We are looking for:
+      * A finished product that meets the spec
+      * Code readability and simplicity
+      * Best practices around React components and frontend styling
+      * You to showcase your skill
+    * Please don't:
+      * Reach for any external UI components. We want to see you build.
+    * Feel free to:
+      * Create additional React components
+      * Use any non-UI npm packages
+    * You can take as long as you like to complete this project, but we'd like you to keep track of much time you spend
+3. Once finished, push your changes and open a pull request with:
+    * How much time you spent
+    * Any thoughts or extra context you want to provide about your code
+    * Any thoughts or reflections you have about the project requirements
 
-In the project directory, you can run:
+---
+#### Install
+1. Clone the repo to your local machine (if you received an archive (zip) of the assessment, skip this)
+    * Click on the green `Clone or download` button above, and switch to HTTPS if the default is SSH. Copy the url.
+    * Clone this repo into a folder on your box: `git clone [url] [folder]`
+2. Create a new branch that you'll push all of your code to: `cd [folder] && git checkout -b demo-cityfield && git push origin demo-cityfield`
+3. Run the assessment in your browser (you will need `npm` or `yarn` installed and working)
+    * Run `yarn` or `npm install`
+    * Run `yarn start` or `npm run start`. If you see the error: `Error: Objects are not valid as a React child`, you are on the right path; you've installed the app correctly, and can start implementing the instructions.
 
-### `npm start`
+---
+#### Build out the project to achieve the following
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##### Function
+1. The **CityField** component
+    1. As text is typed into the CityField component's input, a list of suggested city names should render above/below it. We've provided a list of Canadian city names to use in [`canadian_cities.js`](src/canadian_cities.js).
+    2. Suggested city names should contain the string entered into the input field (case insensitive).
+    3. The list should be keyboard navigable.
+    4. The list items should be selectable by mouse click or hitting the enter key.
+    5. The list of suggestions should NOT show when the input is less than two characters.
+2. The **StatusBar** component
+    1. When the CityField input is empty, the status should show `empty`
+    2. When the CityField component is suggesting city names, the status should show the text in the input and how many suggestions are being displayed
+    3. When the CityField component's input matches a Canadian city name in `canadian_cities.js`, the status should show `valid`
+##### Style
+1. Center the label and input field horizontally and vertically in the viewport window.
+2. In mobile-sized viewports, make the input field the full-width of the viewport.
+3. When the input value matches a Canadian city name, change the background color to green smoothly over half a second.
